@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.31)
 # Database: Sith
-# Generation Time: 2020-09-28 12:05:58 +0000
+# Generation Time: 2020-09-28 12:31:32 +0000
 # ************************************************************
 
 
@@ -20,12 +20,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table Sith
+# Dump of table sith
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `Sith`;
+DROP TABLE IF EXISTS `sith`;
 
-CREATE TABLE `Sith` (
+CREATE TABLE `sith` (
   `id` int(255) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(15) DEFAULT NULL,
   `homeworld` varchar(20) DEFAULT NULL,
@@ -34,17 +34,17 @@ CREATE TABLE `Sith` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `Sith` WRITE;
-/*!40000 ALTER TABLE `Sith` DISABLE KEYS */;
+LOCK TABLES `sith` WRITE;
+/*!40000 ALTER TABLE `sith` DISABLE KEYS */;
 
-INSERT INTO `Sith` (`id`, `name`, `homeworld`, `height`, `birthyear`)
+INSERT INTO `sith` (`id`, `name`, `homeworld`, `height`, `birthyear`)
 VALUES
 	(1,'Darth Vader','Tatooine',203,41),
 	(2,'Darth Maul','Dathomir',175,54),
 	(3,'Darth Sideous','Naboo',173,84),
 	(4,'Darth Tyranus','Serenno',193,102);
 
-/*!40000 ALTER TABLE `Sith` ENABLE KEYS */;
+/*!40000 ALTER TABLE `sith` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
