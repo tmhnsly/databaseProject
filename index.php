@@ -16,32 +16,32 @@
 <main>
 <div class="characterDeck">
     <div class="characterCard">
+        <img class="characterPic" src="">
         <h2 class="characterName">Name: </h2>
         <p class="characterInfo">Homeworld: </p>
         <p class="characterInfo">Height: </p>
         <p class="characterInfo">Birth Year: </p>
-        <img src="">
     </div>
     <div class="characterCard">
+        <img class="characterPic" src="">
         <h2 class="characterName">Name: </h2>
         <p class="characterInfo">Homeworld: </p>
         <p class="characterInfo">Height: </p>
         <p class="characterInfo">Birth Year: </p>
-        <img src="">
     </div>
     <div class="characterCard">
+        <img class="characterPic" src="">
         <h2 class="characterName">Name: </h2>
         <p class="characterInfo">Homeworld: </p>
         <p class="characterInfo">Height: </p>
         <p class="characterInfo">Birth Year: </p>
-        <img src="">
     </div>
     <div class="characterCard">
+        <img class="characterPic" src="">
         <h2 class="characterName">Name: </h2>
         <p class="characterInfo">Homeworld: </p>
         <p class="characterInfo">Height: </p>
         <p class="characterInfo">Birth Year: </p>
-        <img src="">
     </div>
 </div>
 
