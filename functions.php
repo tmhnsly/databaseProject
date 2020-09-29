@@ -33,8 +33,6 @@ function displaySithData(array $cards) :string {
                     <h2> Birth Year: ' . $card['birthyear'] . ' BBY' . '</h2>
                     </div>';
             }
-        } else {
-            return 'Incorrect SQL data entered; check database';
         }
     }
     return $result;
