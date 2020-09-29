@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Connects 
+ * Connects to database "Sith" from host "db" and creates new PDO.
  * @param
  * @return
  */
@@ -13,9 +13,9 @@ function connectDB() :PDO {
 }
 
 /*
- * Requests Sith Data from database
- * @param
- * @return
+ * Gets Sith Data from database
+ * @param PDO $db Gives PDO info from database
+ * @return array Info from SQL database
  */
 
 function getSithData(PDO $db) :array {
@@ -25,9 +25,9 @@ function getSithData(PDO $db) :array {
 }
 
 /*
- * Desc
- * @param
- * @return
+ * Displays "Sith" database info as HTML.
+ * @param array $sithData An indexed array of associated arrays of information about different Sith
+ * @return string A div containing the outputted info
  */
 function displaySithData(array $sithData) :string {
     $result = '';
