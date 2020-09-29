@@ -1,8 +1,10 @@
 <?php
 
 /*
-* connects database to PHP
-*/
+ * Connects 
+ * @param
+ * @return
+ */
 
 function connectDB() :PDO {
     $db = new PDO ('mysql:host=db; dbname=Sith', 'root', 'password');
@@ -10,30 +12,33 @@ function connectDB() :PDO {
     return $db;
 }
 
-/* requests Sith Cards details from db
- *
+/*
+ * Requests Sith Data from database
+ * @param
+ * @return
  */
 
 function getSithData(PDO $db) :array {
     $query = $db->prepare('SELECT `name`, `homeworld`, `height`, `birthyear` FROM `sith`');
     $query->execute();
-    $result = $query-> fetchAll();
-    return $result;
+    return $query-> fetchAll();
 }
 
-function displaySithData(array $cards) :string {
+/*
+ * Desc
+ * @param
+ * @return
+ */
+function displaySithData(array $sithData) :string {
     $result = '';
 
-    if (is_array($cards[0]) == true) {
-        if (array_key_exists("name", $cards[0])) {
-            foreach ($cards as $card){
-                $result .= '<div class="characterCard"> <h1>' . $card['name'] . '</h1>
-                    <h2> Homeworld: ' . $card['homeworld'] . '</h2>
-                    <h2> Height: ' . $card['height'] . 'cm' . '</h2>
-                    <h2> Birth Year: ' . $card['birthyear'] . ' BBY' . '</h2>
+    foreach ($sithData as $sith) {
+        $result .= '<div class="sithProfile"> <h1>' . $sith['name'] . '</h1>
+                    <h2> Homeworld: ' . $sith['homeworld'] . '</h2>
+                    <h2> Height: ' . $sith['height'] . 'cm' . '</h2>
+                    <h2> Birth Year: ' . $sith['birthyear'] . ' BBY' . '</h2>
                     </div>';
-            }
-        }
     }
+
     return $result;
 }

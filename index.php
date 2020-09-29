@@ -1,13 +1,11 @@
 <?php
-
 require_once('functions.php');
 
 $db = connectDB();
 
-$cards = getSithData($db);
+$sithData = getSithData($db);
 
 ?>
-
 <html lang="en-GB">
 <head>
     <link rel="stylesheet" type="text/css" href="normalize.css" />
@@ -16,18 +14,12 @@ $cards = getSithData($db);
     <title>Sith-ipedia</title>
 </head>
 <body>
-
 <header>
     <h1>Sith-ipedia</h1>
 </header>
-
-
 <div>
-
-    <?php echo displaySithData($cards); ?>
-
+    <?php echo displaySithData($sithData); ?>
 </div>
-
 </body>
 </html>
 
