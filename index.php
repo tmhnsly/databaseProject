@@ -1,51 +1,36 @@
-<!doctype html>
+<?php
 
-<html lang="en">
+require_once('functions.php');
+
+$db = connectDB();
+
+$cards = getSithData($db);
+
+?>
+
+<html lang="en-GB">
 <head>
-    <meta charset="utf-8">
-
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="sithipedia.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sith-ipedia</title>
-    <link href="normalize.css" type="text/css" rel="stylesheet">
-    <link href="sithipedia.css" type="text/css" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>Sith-ipedia</h1>
-    </header>
-<main>
-<div class="characterDeck">
-    <div class="characterCard">
-        <img class="characterPic" src="">
-        <h2 class="characterName">Name: </h2>
-        <p class="characterInfo">Homeworld: </p>
-        <p class="characterInfo">Height: </p>
-        <p class="characterInfo">Birth Year: </p>
-    </div>
-    <div class="characterCard">
-        <img class="characterPic" src="">
-        <h2 class="characterName">Name: </h2>
-        <p class="characterInfo">Homeworld: </p>
-        <p class="characterInfo">Height: </p>
-        <p class="characterInfo">Birth Year: </p>
-    </div>
-    <div class="characterCard">
-        <img class="characterPic" src="">
-        <h2 class="characterName">Name: </h2>
-        <p class="characterInfo">Homeworld: </p>
-        <p class="characterInfo">Height: </p>
-        <p class="characterInfo">Birth Year: </p>
-    </div>
-    <div class="characterCard">
-        <img class="characterPic" src="">
-        <h2 class="characterName">Name: </h2>
-        <p class="characterInfo">Homeworld: </p>
-        <p class="characterInfo">Height: </p>
-        <p class="characterInfo">Birth Year: </p>
-    </div>
+
+<header>
+    <h1>Sith-ipedia</h1>
+</header>
+
+
+<div>
+
+    <?php echo displaySithData($cards); ?>
+
 </div>
 
-</main>
 </body>
 </html>
+
+
+
 
