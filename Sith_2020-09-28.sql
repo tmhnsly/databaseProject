@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.31)
 # Database: Sith
-# Generation Time: 2020-09-28 12:31:32 +0000
+# Generation Time: 2020-09-29 14:52:22 +0000
 # ************************************************************
 
 
@@ -41,7 +41,7 @@ INSERT INTO `sith` (`id`, `name`, `homeworld`, `height`, `birthyear`)
 VALUES
 	(1,'Darth Vader','Tatooine',203,41),
 	(2,'Darth Maul','Dathomir',175,54),
-	(3,'Darth Sideous','Naboo',173,84),
+	(3,'Darth Sidious','Naboo',173,84),
 	(4,'Darth Tyranus','Serenno',193,102);
 
 /*!40000 ALTER TABLE `sith` ENABLE KEYS */;
