@@ -1,7 +1,40 @@
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif, serif;
+    color: white;
+    background-color: black;
 }
 
-.sithProfile {
+header {
+    display: flex;
+    justify-content: center;
 }
+
+header h1 {
+    font-family: Futura, Helvetica, sans-serif;
+   font-size: 4rem;
+    color: #ffc419;
+}
+
+.sithDataBox{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.sithProfile h1 {
+    font-size: 2rem;
+
+}
+
+.sithProfile h2 {
+    font-size: 1rem;
+}
+
+.sithProfile img{
+    border-radius: 50%;
+    height: auto%;
+    width: 200px;
+}
+

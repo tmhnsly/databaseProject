@@ -14,12 +14,15 @@ $sithData = getSithData($db);
     <title>Sith-ipedia</title>
 </head>
 <body>
+<container>
+
 <header>
     <h1>Sith-ipedia</h1>
 </header>
-<div>
+<div class="sithDataBox">
     <?php echo displaySithData($sithData); ?>
 </div>
+</container>
 </body>
 </html>
 

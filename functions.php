@@ -33,7 +33,9 @@ function displaySithData(array $sithData) :string {
     $result = '';
 
     foreach ($sithData as $sith) {
-        $result .= '<div class="sithProfile"> <img src="' . $sith['photo'] . '"} alt="Picture of ' . $sith['name'] . '"> <h1>' . $sith['name'] . '</h1>
+        $result .= '<div class="sithProfile">
+                    <img src="' . $sith['photo'] . '" alt="Picture of ' . $sith['name'] . '">
+                    <h1>' . $sith['name'] . '</h1>
                     <h2> Homeworld: ' . $sith['homeworld'] . '</h2>
                     <h2> Height: ' . $sith['height'] . 'cm' . '</h2>
                     <h2> Birth Year: ' . $sith['birthyear'] . ' BBY' . '</h2>
