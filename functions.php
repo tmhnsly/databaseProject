@@ -19,7 +19,7 @@ function connectDB() :PDO {
  */
 
 function getSithData(PDO $db) :array {
-    $query = $db->prepare('SELECT `name`, `homeworld`, `height`, `birthyear` FROM `sith`');
+    $query = $db->prepare('SELECT `name`, `homeworld`, `height`, `birthyear`, `photo` FROM `sith`');
     $query->execute();
     return $query-> fetchAll();
 }
@@ -33,7 +33,7 @@ function displaySithData(array $sithData) :string {
     $result = '';
 
     foreach ($sithData as $sith) {
-        $result .= '<div class="sithProfile"> <h1>' . $sith['name'] . '</h1>
+        $result .= '<div class="sithProfile"> <img src="' . $sith['photo'] . '"} alt="Picture of ' . $sith['name'] . '"> <h1>' . $sith['name'] . '</h1>
                     <h2> Homeworld: ' . $sith['homeworld'] . '</h2>
                     <h2> Height: ' . $sith['height'] . 'cm' . '</h2>
                     <h2> Birth Year: ' . $sith['birthyear'] . ' BBY' . '</h2>
