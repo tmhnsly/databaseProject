@@ -6,8 +6,8 @@
  * @return
  */
 
-function connectDB() :PDO {
-    $db = new PDO ('mysql:host=db; dbname=Sith', 'root', 'password');
+function connectDB($dbname): PDO {
+    $db = new PDO ('mysql:host=db; dbname='.$dbname, 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
 }
@@ -18,7 +18,7 @@ function connectDB() :PDO {
  * @return array Info from SQL database
  */
 
-function getSithData(PDO $db) :array {
+function getSithData(PDO $db): array {
     $query = $db->prepare('SELECT `name`, `homeworld`, `height`, `birthyear`, `photo` FROM `sith`');
     $query->execute();
     return $query-> fetchAll();
@@ -29,7 +29,7 @@ function getSithData(PDO $db) :array {
  * @param array $sithData An indexed array of associated arrays of information about different Sith
  * @return string A div containing the outputted info
  */
-function displaySithData(array $sithData) :string {
+function displaySithData(array $sithData): string {
     $result = '';
 
     foreach ($sithData as $sith) {

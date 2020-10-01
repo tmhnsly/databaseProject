@@ -1,7 +1,7 @@
 <?php
 require_once('functions.php');
 
-$db = connectDB();
+$db = connectDB('Siths');
 
 $sithData = getSithData($db);
 
