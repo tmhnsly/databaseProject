@@ -5,15 +5,14 @@ use PHPUnit\Framework\TestCase;
 class functions extends TestCase {
     public function testSuccessDisplaySithData()
     {
-        $input = [
+        $input =
             [
                 'photo' => 'peter.png',
                 'name' => 'peter',
                 'height' => 123,
                 'homeworld' => 'earth',
                 'birthyear' => '91'
-            ]
-        ];
+            ];
         $expectedOutput = '<div class="sithProfile">
                     <img src="peter.png" alt="Picture of peter">
                     <h1>peter</h1>
@@ -21,14 +20,29 @@ class functions extends TestCase {
                     <h2> Height: 123cm</h2>
                     <h2> Birth Year: 91 BBY</h2>
                     </div>';
-        $result = displaySithData($input);
+        $result = displaySith($input);
+        $this->assertEquals($expectedOutput, $result);
+    }
+
+    public function testFailureDisplaySithData()
+    {
+        $input =
+            [
+                'photo' => NULL,
+                'name' => 'peter',
+                'height' => 123,
+                'homeworld' => 'earth',
+                'birthyear' => '91'
+            ];
+        $expectedOutput = false;
+        $result = displaySith($input);
         $this->assertEquals($expectedOutput, $result);
     }
 
     public function testMalformedDisplaySithData()
     {
-    $this->expectException(TypeError::class);
-    $input = 'do it';
-    displaySithData($input);
+        $this->expectException(TypeError::class);
+        $input = 'do it';
+        displaySith($input);
     }
 }

@@ -5,7 +5,6 @@
  * @param
  * @return
  */
-
 function connectDB($dbname): PDO {
     $db = new PDO ('mysql:host=db; dbname='.$dbname, 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -17,7 +16,6 @@ function connectDB($dbname): PDO {
  * @param PDO $db Gives PDO info from database
  * @return array Info from SQL database
  */
-
 function getSithData(PDO $db): array {
     $query = $db->prepare('SELECT `name`, `homeworld`, `height`, `birthyear`, `photo` FROM `sith`');
     $query->execute();
@@ -29,10 +27,9 @@ function getSithData(PDO $db): array {
  * @param array $sithData An indexed array of associated arrays of information about different Sith
  * @return string A div containing the outputted info
  */
-function displaySithData(array $sithData): string {
+function displaySith(array $sith) {
     $result = '';
-
-    foreach ($sithData as $sith) {
+    if (isset($sith['photo'])) {
         $result .= '<div class="sithProfile">
                     <img src="' . $sith['photo'] . '" alt="Picture of ' . $sith['name'] . '">
                     <h1>' . $sith['name'] . '</h1>
@@ -40,7 +37,9 @@ function displaySithData(array $sithData): string {
                     <h2> Height: ' . $sith['height'] . 'cm' . '</h2>
                     <h2> Birth Year: ' . $sith['birthyear'] . ' BBY' . '</h2>
                     </div>';
-    }
 
+    } else {
+        return false;
+    }
     return $result;
 }

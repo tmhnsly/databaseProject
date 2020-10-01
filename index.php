@@ -20,7 +20,11 @@ $sithData = getSithData($db);
     <h1>Sith-ipedia</h1>
 </header>
 <div class="sithDataBox">
-    <?php echo displaySithData($sithData);?>
+    <?php
+        foreach ($sithData as $sith) {
+            echo displaySith($sith);
+        };
+    ?>
 </div>
 </container>
 </body>
