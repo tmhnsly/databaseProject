@@ -29,6 +29,6 @@ class functions extends TestCase {
     {
     $this->expectException(TypeError::class);
     $input = 'do it';
-    displaySithData($input)
+    displaySithData($input);
     }
 }
